@@ -1,5 +1,5 @@
 module Flatten where
 
 data NestedList a = Elem a | List [NestedList a]
-flatten :: NestedList -> List
-flatten (NestedList x:xs)
+flatten :: NestedList a -> [a]
+flatten (Elem x) = [x]
